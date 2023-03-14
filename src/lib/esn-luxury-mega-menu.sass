@@ -1,0 +1,49 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+.container>div
+    border: solid 0.2px #a09f9f
+    margin: 0.1em
+    padding: 0.1em
+    cursor: pointer
+.container>div:hover    
+    color: black
+.d-static
+    position: static       
+.d-relative
+    position: relative        
+.d-absolute
+    position: absolute  
+    visibility: hidden
+    color: black
+    left:0px
+    background-color: var(--menuBg)
+    width:500px  
+.d-relative>div:hover    
+    border: solid  1px
+.d-relative :hover .d-absolute
+    visibility: visible
+    animation: fadein 1.5s forwards
+.d-relative > .d-absolute:hover    
+    border: solid 2px black
+@keyframes fadein 
+    0%
+        opacity: 0
+    100%
+        opacity: 1    
+.text
+    color: var(--color)        
+.item 
+  background-image: -webkit-linear-gradient(30deg,var(--bg) 50%, transparent 50%)
+  background-size: 500%
+  background-repeat: no-repeat
+  background-position: 0%
+  -webkit-transition: background 300ms ease-in-out
+  transition: background 300ms ease-in-out
+.item:hover 
+  background-position: 100%
+.d-absolute>div
+    background-color: var(--menuBg)
+    opacity:50%
+    transition: opacity 200ms ease-in-out
+     
+.d-absolute>div:hover
+    opacity:100%

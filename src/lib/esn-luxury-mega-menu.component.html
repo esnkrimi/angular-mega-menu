@@ -1,0 +1,17 @@
+<div class="container d-relative text-left row flex-nowrap">
+  <div class="d-static text item" [style]="'--bg:'+data.bg+';--color:'+data.color" *ngFor="let i of data.menu">
+    {{getKeys(i)}}
+    <div class="d-absolute" [style]="'--menuBg:'+data.menuBg" *ngFor="let j of getRes(getVals(i));let k=index">
+      <div *ngFor="let o of j">
+        <div class="row p-2 m-1" (click)="callback(o)">
+          <div style="flex-basis: 20%">
+            <img
+              [src]="data.baseUrl+o+'.jpg?t='"
+              class="w-100 rounded">
+          </div>
+          <div class="text p-2" [style]="'--color:'+data.color" style="flex-basis: 80%">{{o}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
