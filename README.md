@@ -2,6 +2,8 @@
 
 Angular Mega Menu
 
+https://www.npmjs.com/package/esn-luxury-mega-menu
+
 ---------------------INSTALLATION
 
      npm i esn-luxury-mega-menu --force
